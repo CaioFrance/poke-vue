@@ -34,7 +34,6 @@ export default {
       pokemons: [],
       filteredPokemons: [],
       busca: "",
-      buscaNull: false,
     };
   },
   methods: {
@@ -48,9 +47,7 @@ export default {
         (pokemon) => pokemon.name === this.busca
       );
       this.busca = "";
-      if (this.filteredPokemons === []) {
-        this.buscaNull = true;
-      }
+
       return this.filteredPokemons;
     },
   },
